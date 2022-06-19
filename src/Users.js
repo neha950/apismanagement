@@ -13,7 +13,7 @@ const Users = () => {
 
         fetch(apiUrl).then((result) => {
             result.json().then((response) => {
-                // console.log("response from api", response)
+                console.log("response from api", response)
 
                 setUsersList([...response.data])
             })
@@ -21,7 +21,7 @@ const Users = () => {
 
     }
 
-    console.log("usersList", usersList)
+    console.log("usersList----->", usersList)
 
 
 
@@ -35,7 +35,7 @@ const Users = () => {
                     <th>Last Name</th>
                     <th>Email</th>
                 </tr>
-                
+
                 {
                     usersList.map((userItem, i) => (
                         <tr>

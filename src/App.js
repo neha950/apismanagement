@@ -2,16 +2,17 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Users from './Users';
 import AddUser from './AddUser'
 import './App.css';
-
+import NavBar from './NavBar'
 
 function App() {
   return (
     <div className="App">
-      <p>Neha pareek users management</p>
+      <p>Neha Pareek Users Management</p>
       <BrowserRouter>
+      <NavBar />
       <Routes>
         <Route path="/users" element={<Users />} />
-        <Route path="/adduser" element={<AddUser />} />
+        <Route path="/add-user" element={<AddUser />} />
       </Routes>
       </BrowserRouter>
     </div>

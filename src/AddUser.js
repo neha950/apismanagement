@@ -9,6 +9,15 @@ const AddUser = () => {
 
     const handleChange = (e, fieldname) => {
         const temp = user;
+
+        // temp={
+        //     name :"",
+        //     job:""
+        // }
+        //if fieldname is name then 
+        // temp["name"]=e.target.value
+        //if fieldname is job then 
+        // temp["job"]=e.target.value
         temp[fieldname] = e.target.value;
         // console.log("temp",temp);
 
@@ -17,10 +26,11 @@ const AddUser = () => {
 
 
     const handleSubmit = async () => {
-        console.log("user", user);
+        // console.log("user", user);
+        //api call to save data in database using api
         const response = await fetch(`https://reqres.in/api/users`, {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            body: JSON.stringify(user) // body data type must match "Content-Type" header
+            body: JSON.stringify(user)
         });
 
         console.log("response from api", response)
